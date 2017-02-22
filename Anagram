@@ -1,0 +1,23 @@
+package advancelearn;
+import java.util.*;
+public class Anagram {
+public static void main(String [] args){
+	Scanner in=new Scanner(System.in);
+	System.out.println("Enter the string");
+	char[] ch=in.nextLine().toCharArray();
+	System.out.println("Enter the second string");
+	char[] ch3=in.nextLine().toCharArray();
+	List<Character> ch1=new ArrayList<Character>();
+  List<Character> ch4=new ArrayList<Character>();
+	for(Character ch2:ch){ch1.add(ch2);}
+	for(Character ch2:ch3){
+		ch4.add(ch2);
+	}
+	Collections.sort(ch1);Collections.sort(ch4);
+	if(ch1.equals(ch4)){
+		System.out.println("Anagram");
+	}else
+		System.out.println("Not anagram");
+	in.close();
+}
+}
